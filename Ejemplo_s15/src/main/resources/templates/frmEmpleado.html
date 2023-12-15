@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlsn:th="http:www.thymeleaft.org">
+	<head>
+		
+		<meta charset="utf-8">
+		<title>Empleado</title>
+	</head>
+	<body>
+		<form id="frm1" method="post" th:object="${empleado}" th:action="@{/procesar}">
+			<p>
+				<label>Codigo</label>
+				<input type="text" th:field="*{codigo}*">
+			</p>
+			<p>
+				<label>Nombre</label>
+				<input type="text" th:field="*{nombre}*">
+			</p>
+			<p>
+				<label>Apellido</label>
+				<input type="text" th:field="*{apellido}*">
+			</p>
+			<p>
+				<label>Cargo</label>
+				<input type="tex" th:field="*{cargo}*">
+			</p>
+			<p>
+				<label>Aniosservicio</label>
+				<input type="tex" th:field="*{aniosservicio}*">
+			</p>
+			<p>
+				
+				<input type="submit" name="Enviar">
+			</p>
+			<p>
+				<strong> Reporte de Pagos</strong> <br>
+				Codigo: <span> th:text="${acodigo}"</span><br>
+				Nombre: <span> th:text="${anombre}"</span><br>
+				Apellido: <span> th:text="${aapellido}"</span><br>
+				Cargo: <span> th:text="${acargo}"</span><br>
+				Años de Servicio: <span> th:text="${aaniosservicio}"</span><br>
+			</p>
+			
+		</form>
+		<h2 >Reporte de pagos</h2>
+		
+		
+	</body>
+	
+</html>
